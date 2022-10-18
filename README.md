@@ -204,14 +204,8 @@ We can estimate the parameters of the model β0 and β1 by minimize the error in
 
 ## 8.	About the dataset
 
-The data set has been imported from the econometrics website with the following url-
+The data set has been imported from kraggle-
 
-
-http://www.econometrics.com/intro/sales.htm
-
-
-This data set contains Sales and Advertising expenditures for a dietary weight control product. It contains monthly data for 36 months. 
-The variables in this data set are Sales and Advertising.
 
 &nbsp; &nbsp; &nbsp; &nbsp;
 
@@ -234,22 +228,20 @@ Now the model is ready to make predictions on the test data (X_test). Hence, I p
 
 ## 11.	Model slope and intercept term
 
-The model slope is given by lm.coef_ and model intercept term is given by lm.intercept_. The estimated model slope and intercept values are 1.60509347 and  -11.16003616.
+The model slope is given by lm.coef_ and model intercept term is given by lm.intercept_. The estimated model slope and intercept values are [-0.0346302 ,  0.10162945,  0.02950141] and 0.13258335542850685
 
 So, the equation of the fitted regression line is
-
-y = 1.60509347 * x - 11.16003616  
+ 
 
 
 &nbsp; &nbsp; &nbsp; &nbsp;
 
 ## 12.	Making predictions
 
-I have predicted the Advertising values on first five 5 Sales datasets by writing code
+I have predicted the Salary values on first five 5 Experience level datasets by writing code
 
-		lm.predict(X) [0:5]  
+		lm.predict(X) [.6]  
 
-If I remove [0:5], then I will get predicted Advertising values for the whole Sales dataset.
 
 To make prediction, on an individual Sales value, I write
 
@@ -285,7 +277,7 @@ In general, the higher the R2 Score value, the better the model fits the data. U
 
 ## 14.	Interpretation and Conclusion
 
-The RMSE value has been found to be 11.2273. It means the standard deviation for our prediction is 11.2273. So, sometimes we expect the predictions to be off by more than 11.2273 and other times we expect less than 11.2273. So, the model is not good fit to the data. 
+The RMSE value has been found to be 0.0889. So, sometimes we expect the predictions to be off by more than 0.0889 and other times we expect less than 0.0889. So, the model is not good fit to the data. 
 
 In business decisions, the benchmark for the R2 score value is 0.7. It means if R2 score value >= 0.7, then the model is good enough to deploy on unseen data whereas if R2 score value < 0.7, then the model is not good enough to deploy. Our R2 score value has been found to be .5789. It means that this model explains 57.89 % of the variance in our dependent variable. So, the R2 score value confirms that the model is not good enough to deploy because it does not provide good fit to the data.
 
